@@ -22,10 +22,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xffC4DFCB),
       appBar: AppBar(
-        leading: Icon(
-          Icons.menu,
-          color: Theme.of(context).primaryColor,
-        ),
+        // leading: Icon(
+        //   Icons.menu,
+        //   color: Theme.of(context).primaryColor,
+        // ),
         title: Text(
           "Netbot Delivery",
           style: TextStyle(
@@ -143,17 +143,43 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Delivery Trips page",
-          style: TextStyle(
-            color: Color.fromARGB(255, 31, 27, 94),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
+      // color: const Color(0xffC4DFCB),
+      // child: Center(
+      //   child: Text(
+      //     "Delivery Trips page",
+      //     style: TextStyle(
+      //       color: Color.fromARGB(255, 31, 27, 94),
+      //       fontSize: 20,
+      //       fontWeight: FontWeight.w500,
+      //     ),
+      //   ),
+      // ),
+
+      height: MediaQuery.of(context).size.height * 0.65,
+      width: MediaQuery.of(context).size.width,
+      padding: EdgeInsets.only(right: 8.0),
+      child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: 20,
+          itemBuilder: (context, index) {
+            return Card(
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: ListTile(
+                  leading: Container(
+                    height: 90,
+                    width: 90,
+                  ),
+                  title: Align(
+                      alignment: Alignment.topRight,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                      )),
+                ),
+              ),
+            );
+          }),
     );
   }
 }
