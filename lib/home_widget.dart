@@ -155,28 +155,40 @@ class Page1 extends StatelessWidget {
       //   ),
       // ),
 
-      height: MediaQuery.of(context).size.height * 0.65,
+      height: MediaQuery.of(context).size.height * 1,
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.only(right: 8.0),
+      padding: EdgeInsets.only(right: 1),
       child: ListView.builder(
           shrinkWrap: true,
           itemCount: 20,
           itemBuilder: (context, index) {
             return Card(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: ListTile(
-                  leading: Container(
-                    height: 90,
-                    width: 90,
+              // child: Align(
+              //   alignment: Alignment.centerLeft,
+              //   child: ListTile(
+              //     leading: Container(
+              //       height: 90,
+              //       width: 90,
+              //     ),
+              //     title: Align(
+              //         alignment: Alignment.topRight,
+              //         child: Column(
+              //           mainAxisAlignment: MainAxisAlignment.end,
+              //           crossAxisAlignment: CrossAxisAlignment.end,
+              //         )),
+              //   ),
+              // ),
+
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.fire_truck, size: 30),
+                    title: Text('[Delivery Trip]:NT001'),
+                    trailing: Text('Pending'),
+                    subtitle: Text('Scheduled Time : 14,11,2022, 9.00AM'),
                   ),
-                  title: Align(
-                      alignment: Alignment.topRight,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                      )),
-                ),
+                ],
               ),
             );
           }),
