@@ -143,6 +143,39 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: const Color(0xffC4DFCB),
+      child: Center(
+        child: Text(
+          "Dashboard",
+          style: TextStyle(
+            color: Color.fromARGB(255, 24, 129, 185),
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Page2 extends StatelessWidget {
+  const Page2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // color: const Color(0xffC4DFCB),
+      // child: Center(
+      //   child: Text(
+      //     "Dashboard",
+      //     style: TextStyle(
+      //       color: Color.fromARGB(255, 24, 129, 185),
+      //       fontSize: 20,
+      //       fontWeight: FontWeight.w500,
+      //     ),
+      //   ),
+      // ),
+
       // color: const Color(0xffC4DFCB),
       // child: Center(
       //   child: Text(
@@ -192,27 +225,6 @@ class Page1 extends StatelessWidget {
               ),
             );
           }),
-    );
-  }
-}
-
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 2",
-          style: TextStyle(
-            color: Color.fromARGB(255, 24, 129, 185),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
     );
   }
 }
