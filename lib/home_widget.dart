@@ -137,24 +137,40 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Dashboard",
-          style: TextStyle(
-            color: Color.fromARGB(255, 24, 129, 185),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
+
+
+
+      height: MediaQuery.of(context).size.height *1 ,
+      width: MediaQuery.of(context).size.width,
+      padding: EdgeInsets.only(right: 1),
+      child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            return Card(
+
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+             
+                  ),
+                ],
+              ),
+            );
+          }),
+
+
+
     );
+    
   }
 }
 
@@ -270,3 +286,4 @@ class Page4 extends StatelessWidget {
     );
   }
 }
+
