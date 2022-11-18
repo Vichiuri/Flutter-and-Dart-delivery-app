@@ -289,17 +289,27 @@ class Page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 4",
-          style: TextStyle(
-            color: Color.fromARGB(255, 14, 84, 155),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
+      height: 250,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.red, Colors.deepOrange.shade300],
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          stops: [0.5, 0.9],
         ),
       ),
+
+      // color: const Color(0xffC4DFCB),
+      // child: Center(
+      //   child: Text(
+      //     "Page Number ",
+      //     style: TextStyle(
+      //       color: Color.fromARGB(255, 14, 84, 155),
+      //       fontSize: 20,
+      //       fontWeight: FontWeight.w500,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
